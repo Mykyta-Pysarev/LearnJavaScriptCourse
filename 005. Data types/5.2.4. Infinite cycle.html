@@ -9,20 +9,14 @@
 <body>
     <script>
         "use strict";
+
+        let i = 0;
+        while (i != 10) {
+        i += 0.2;
+        } // i will never be == 10.
+
         
-        it("Возводит x в степень n", function() {
-  let x = 5;
 
-  let result = x;
-  assert.equal(pow(x, 1), result);
-
-  result *= x;
-  assert.equal(pow(x, 2), result);
-
-  result *= x;
-  assert.equal(pow(x, 3), result);
-});
-       
     </script>
 </body>
 </html>

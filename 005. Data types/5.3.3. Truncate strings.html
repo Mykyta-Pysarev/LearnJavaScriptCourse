@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let maximumLength = '20';
+
+        function truncate (text, maxLength) {
+            if (text.length > maxLength){
+                return (text.slice(0, maxLength - 1) + "…");
+            }
+            return text;
+
+        }
+
+        alert( truncate("Вот, что мне хотелось бы сказать на эту тему:", maximumLength) );
+        alert( truncate("Всем привет!", maximumLength) );
+
+    </script>
+</body>
+</html>

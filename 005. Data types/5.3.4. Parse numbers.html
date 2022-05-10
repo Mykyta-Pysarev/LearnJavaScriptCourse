@@ -9,20 +9,14 @@
 <body>
     <script>
         "use strict";
-        
-        it("Возводит x в степень n", function() {
-  let x = 5;
 
-  let result = x;
-  assert.equal(pow(x, 1), result);
+        alert( extractCurrencyValue('$120') );
 
-  result *= x;
-  assert.equal(pow(x, 2), result);
+        function extractCurrencyValue (value) {
+            return +( value.slice(1) );
+        }
 
-  result *= x;
-  assert.equal(pow(x, 3), result);
-});
-       
+
     </script>
 </body>
 </html>

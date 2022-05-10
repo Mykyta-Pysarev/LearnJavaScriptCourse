@@ -9,20 +9,20 @@
 <body>
     <script>
         "use strict";
-        
-        it("Возводит x в степень n", function() {
-  let x = 5;
 
-  let result = x;
-  assert.equal(pow(x, 1), result);
+        let rWord = '  busian  ';
 
-  result *= x;
-  assert.equal(pow(x, 2), result);
+        function ucFirst (word) {
+            if (!word) return word;
 
-  result *= x;
-  assert.equal(pow(x, 3), result);
-});
-       
+                let uWord = ( word.trim() )[0].toUpperCase() + ( word.trim() ).slice(1);
+                return uWord;
+        }
+
+        alert( ucFirst(rWord) );
+
+
+
     </script>
 </body>
 </html>

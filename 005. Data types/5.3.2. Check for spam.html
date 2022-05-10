@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let str = 'buy ViAgRA now';
+        let str1 = 'free xxxxx';
+        let str2 = 'innocent rabbit';
+
+        function checkSpam(text) {
+            let checkStr = text.toLowerCase();
+
+            if (checkStr.indexOf('viagra') != -1 ||  checkStr.indexOf('xxx') != -1) {
+                return true;
+            };
+            
+            return false;
+        }
+
+        alert(`Spam in text is ${ checkSpam(str) }`);
+        alert(`Spam in text is ${ checkSpam(str1) }`);
+        alert(`Spam in text is ${ checkSpam(str2) }`);
+
+    </script>
+</body>
+</html>

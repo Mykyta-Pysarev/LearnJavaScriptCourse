@@ -9,20 +9,20 @@
 <body>
     <script>
         "use strict";
+
+        let minNumber = +prompt('Enter minimum:');
+        let maxNumber = +prompt('Enter maximum:');
+
+
+        function random (min, max) {
+            let result = Math.random() * (max - min) + min;
+            return result;
+        }
+
+        alert( random(minNumber, maxNumber) );
+
         
-        it("Возводит x в степень n", function() {
-  let x = 5;
 
-  let result = x;
-  assert.equal(pow(x, 1), result);
-
-  result *= x;
-  assert.equal(pow(x, 2), result);
-
-  result *= x;
-  assert.equal(pow(x, 3), result);
-});
-       
     </script>
 </body>
 </html>
