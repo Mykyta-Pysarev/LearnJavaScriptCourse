@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        "use strict";
+        'use strict';
+        let salaries = {
+            
+        }
 
-    let a = Number('Haha');
+        let sum = 0;
 
-    isNaN(a);
+        for(let item in salaries) {
+            sum += salaries[item];
+        }
 
-
-       
+        alert(sum);
     </script>
 </body>
+
 </html>

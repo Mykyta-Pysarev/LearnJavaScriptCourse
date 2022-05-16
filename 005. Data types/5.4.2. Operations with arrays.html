@@ -10,12 +10,20 @@
     <script>
         "use strict";
 
-    let a = Number('Haha');
+        let styles = ['Jazz', 'Blues'];
 
-    isNaN(a);
+        styles.push('Rock-n-roll');
 
+        let arrLength = Math.floor( styles.length / 2 );
 
-       
+        styles[arrLength] = 'Classic';
+
+        alert( styles.shift() );
+
+        styles.unshift('Rap', 'Reggy');
+
+        alert( styles );
+
     </script>
 </body>
 </html>

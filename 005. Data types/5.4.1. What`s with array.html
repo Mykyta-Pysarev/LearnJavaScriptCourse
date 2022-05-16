@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let fruits = ["Яблоки", "Груша", "Апельсин"];
+
+        // добавляем новое значение в "копию"
+        let shoppingCart = fruits;
+        shoppingCart.push("Банан");
+
+        // что в fruits?
+        alert( fruits.length ); // 4 ["Яблоки", "Груша", "Апельсин", "Банан"]
+
+
+    </script>
+</body>
+</html>

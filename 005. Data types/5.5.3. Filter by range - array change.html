@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let arrSource = [1, 3, 16, 1, 26, 105, 44 , -12, 0, -4];
+
+        function filterRangeInPlace(arr, a , b){
+            for(let i = 0; i < arr.length -1; i++) {
+                if(arr[i] >= a && arr[i] <= b) {
+                    arr[i];
+                } else {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+        filterRangeInPlace(arrSource, -5, 5)
+
+        alert( arrSource );
+        
+    </script>
+</body>
+</html>

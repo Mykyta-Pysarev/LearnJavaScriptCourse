@@ -10,12 +10,18 @@
     <script>
         "use strict";
 
-    let a = Number('Haha');
+        let arr = [5, 2, 1, -10, 8];
 
-    isNaN(a);
+        function sortArr(array) {
+            array.sort(
+                (a, b) => b - a
+            );
+        }
 
+        sortArr(arr);
 
-       
+        alert( arr ); // 8, 5, 2, 1, -10
+        
     </script>
 </body>
 </html>

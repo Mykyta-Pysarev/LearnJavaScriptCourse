@@ -10,12 +10,19 @@
     <script>
         "use strict";
 
-    let a = Number('Haha');
+        let arr = ["HTML", "JavaScript", "CSS"];
 
-    isNaN(a);
+        let arrSorted = arr.map(item => item);
 
+        function sortArr(array) {
+            array.sort();
+        }
 
-       
+        sortArr(arrSorted);
+
+        alert( arr ); 
+        alert( arrSorted );
+        
     </script>
 </body>
 </html>

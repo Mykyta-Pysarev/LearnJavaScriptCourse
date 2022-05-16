@@ -10,12 +10,15 @@
     <script>
         "use strict";
 
-    let a = Number('Haha');
+        let arrSource = [1, 3, 16, 1, 26, 105, 44 , -12, 0, -4];
 
-    isNaN(a);
+        function filterRange (arr, a, b) {
+            let newArr = arr.filter(item => item >= a && item <= b);
+            return newArr;
+        }
 
-
-       
+        alert( filterRange(arrSource, -10, 50) );
+        
     </script>
 </body>
 </html>

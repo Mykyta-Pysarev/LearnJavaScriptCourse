@@ -10,12 +10,15 @@
     <script>
         "use strict";
 
-    let a = Number('Haha');
+        let arr = ["a", "b"];
 
-    isNaN(a);
+        arr.push(function() {
+        alert( this );
+        });
 
+        arr[2](); // array will behave as object and will show array content.
+        //Need to learn more about objects
 
-       
     </script>
 </body>
 </html>

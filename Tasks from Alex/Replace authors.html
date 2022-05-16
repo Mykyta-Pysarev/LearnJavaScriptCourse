@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        const inputText = "Highly recommend you to read at least one work of Shakespeare. He made his masterpieces for hundreds of years before London, Dickens and Fitzgerald. Hope to buy last book to my collection it 2022, and read it.";
+
+        const parser = (txt) => {
+
+            let textArr = txt.split (' ');
+
+            let authors = textArr.filter(item => item[0] === item[0].toUpperCase() && !isFinite(item[0]));
+
+            textArr = txt.split ('.');
+
+            for (let j = 0; j < authors.length; j++) {
+                for (let i = 0; i < textArr.length; i++) {
+                    if (textArr[i].trim().startsWith(authors[j])){
+                        authors.splice(j, 1);
+                        j--;
+                        break;
+                    }
+                }
+            }
+
+            textArr = txt.split (' ');
+
+            for (let i = 0; i < authors.length; i++) {
+                for (let j = 0; j < textArr.length; j++) {
+                    if(textArr[j] == authors[i] && textArr[j].endsWith('.')){
+                        textArr[j] = 'writer' + '.';
+                    } else if (textArr[j] == authors[i] && textArr[j].endsWith(',')) {
+                        textArr[j] = 'writer' + ',';
+                    } else if (textArr[j] == authors[i]) {
+                        textArr[j] = 'writer';
+                    }
+                }
+            }
+            return textArr.join(' ');
+        }
+
+        console.log(parser(inputText));
+
+        
+    </script>
+</body>
+</html>
