@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        let f = debounce(alert, 1000);
+
+        function debounce (alert, ms) {
+            let cooldown = false;
+
+            return function () {
+                if (cooldown) return;
+
+                alert.apply(this, arguments);
+
+                cooldown = true;
+
+                setTimeout(() => cooldown = false, ms);
+
+            }
+        }
+
+        f(1); // выполняется немедленно
+        f(2); // проигнорирован
+
+        setTimeout(() => f(3), 100); // проигнорирован (прошло только 100 мс)
+        setTimeout(() => f(4), 1100); // выполняется
+        setTimeout(() => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
+
+
+    </script>
+</body>
+
+</html>

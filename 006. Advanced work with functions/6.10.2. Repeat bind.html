@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        "use strict";
+        'use strict';
+        function f() {
+            alert(this.name);
+        }
 
-alert(1325541600000/(24*60*60*1000))
+        f = f.bind({ name: "Вася" }).bind({ name: "Петя" });
 
-       
+        f(); //Вася
+
+
     </script>
 </body>
+
 </html>

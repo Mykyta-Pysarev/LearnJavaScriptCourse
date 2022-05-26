@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        "use strict";
+        let date = new Date(2015, 0, 2);
 
-alert(1325541600000/(24*60*60*1000))
+        alert(getDateAgo(date, 1)); // 1, (1 Jan 2015)
+        alert(getDateAgo(date, 2)); // 31, (31 Dec 2014)
+        alert(getDateAgo(date, 365)); // 2, (2 Jan 2014)
 
-       
     </script>
 </body>
+
 </html>

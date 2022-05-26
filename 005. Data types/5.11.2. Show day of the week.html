@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let date = new Date(2012, 0, 4);
+
+        function getWeekDay(date) {
+           switch (date.getDay()) {
+                case 0:
+                    return 'ВС';
+                    break;
+                case 1:
+                    return 'ПН';
+                    break;
+                case 2:
+                    return 'ВТ';
+                    break;
+                case 3:
+                    return 'СР';
+                    break;
+                case 4:
+                    return 'ЧТ';
+                    break;
+                case 5:
+                    return 'ПТ';
+                    break;
+                case 6:
+                    return 'СБ';
+                    break;
+
+            };
+        }
+
+        alert( getWeekDay(date) );
+
+    </script>
+</body>
+
+</html>
